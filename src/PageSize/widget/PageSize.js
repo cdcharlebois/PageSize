@@ -105,6 +105,9 @@ define([
 			var newSize = parseInt(this.selectNode.value);
 			datasource._pageSize = newSize
 			grid.params.config.gridpresentation.rows = newSize;
+			if (grid._gridState) {
+				grid._gridState.rows = newSize;
+			}
 			if (grid.reload) {
 				grid.reload();
 			} else {
