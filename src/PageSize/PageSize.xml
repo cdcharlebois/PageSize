@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="PageSize.widget.PageSize" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>PageSize</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+	<properties>
+        <property key="targetGridName" type="string" required="true" defaultValue="">
+            <caption>Grid Name</caption>
+            <category>Appearance</category>
+            <description>The name of the grid on this page, as configured in the modeler.</description>
+        </property>
+		<property key="pageSizeOptions" type="object" isList="true" required="true">
+            <caption>Page Size Options</caption>
+            <category>Appearance</category>
+            <description>The list of page sizes that a user will be able choose.</description>
+            <properties>
+				<property key="pageSize" type="integer" required="true" defaultValue="10">
+		            <caption>Page Size</caption>
+		            <category>General</category>
+		            <description>The page size option.</description>
+		        </property>
+				<property key="pageSizeLabel" type="string" required="true">
+		            <caption>Page Size Label</caption>
+		            <category>General</category>
+		            <description>The label to show for this option. Can simply be the same as the page size.</description>
+		        </property>
+            </properties>
+        </property>
+    </properties>
+</widget>
